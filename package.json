@@ -4,13 +4,15 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "api:dev": "turbo run dev --filter=api",
+    "api:cli": "turbo run cli --cwd=./apps/api --"
   },
   "devDependencies": {
-    "eslint": "^8.48.0",
+    "@ts-full-stack/eslint-config": "workspace:*",
+    "eslint": "^8.49.0",
     "prettier": "^3.0.3",
-    "tsconfig": "workspace:*",
-    "turbo": "latest"
+    "turbo": "^1.10.13"
   },
   "packageManager": "pnpm@8.6.10",
   "name": "ts-full-stack"
